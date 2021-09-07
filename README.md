@@ -1,1 +1,1 @@
-RK_137 SGSIbot
+RK_137 SGSi
