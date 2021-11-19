@@ -41,19 +41,11 @@ jobs:
               sudo dpkg --purge --force-depends ca-certificates-java
               sudo apt-get install ca-certificates-java -y
               cd ${ABC}
-              git clone -b main https://github.com/rahulkhatri137/Bot3 Bot; cd Bot
+              git clone -b test https://github.com/rahulkhatri137/Bot3 Bot; cd Bot
               ./gradlew shadowJar
               cd ../; mv Bot/build/libs/*.jar BoboBot.jar
               rm -rf Bot
      
-       - name: Setup Erfan Tools
-         timeout-minutes: 10
-         run: |
-              sudo -E apt-get -qq install openjdk-8-jdk
-              git clone --recurse-submodules https://github.com/rahulkhatri137/ErfanGSIs
-              sudo chmod -R 0777 ErfanGSIs
-              sudo bash ErfanGSIs/setup.sh
-         
        - name: Add values
          timeout-minutes: 1
          run: |
@@ -78,14 +70,4 @@ jobs:
          timeout-minutes: 350
          continue-on-error: true
          run: |
-              sudo /usr/java/oracle/jdk-16.0.1/bin/java -jar BoboBot.jar
-         
-       - name: Loop
-         continue-on-error: true
-         run: |
-          git clone https://${{ secrets.GH_TOKEN }}@github.com/${GITHUB_REPOSITORY} loop
-          cd loop || exit 1
-          echo $(( RANDOM - ( RANDOM % RANDOM ) )) > loop.txt
-          git add loop.txt
-          git commit -m "Workflow : Loop"
-          git push -q https://${{ secrets.GH_TOKEN }}@github.com/${GITHUB_REPOSITORY} HEAD:rk137
+              sudo /usr/oracle/java/graalvm-ce-java16-21.2.0/bin/java -jar BoboBot.jar
