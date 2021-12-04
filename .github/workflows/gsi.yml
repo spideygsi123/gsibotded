@@ -63,16 +63,16 @@ jobs:
               echo "bot-token=${{ secrets.BOTKEY }}" >> configs.prop
               echo "bot-username=${{ secrets.BOTUN }}" >> configs.prop
               echo "bot-master=${{ secrets.USERKEY }}" >> configs.prop
-              echo "privateChat=-1001412098793" >> configs.prop
-              echo "requestChat=-1001484691064" >> configs.prop
-              echo "publicChannel=RK137GSI" >> configs.prop
+              echo "privateChat=-1823032615" >> configs.prop
+              echo "requestChat=-1823032615" >> configs.prop
+              echo "publicChannel=dpgsi" >> configs.prop
               echo "bot-sf-pass=${{ secrets.SFPASS }}" >> sf-creds.prop
               echo "bot-sf-proj=${{ secrets.PROJECT }}" >> sf-creds.prop
               echo "bot-sf-user=${{ secrets.SFUSER }}" >> sf-creds.prop
-              echo "bot-announcement-id=-1001475427846" >> sf-creds.prop
+              echo "bot-announcement-id=--1001475427846" >> sf-creds.prop
               echo "bot-sf-host=frs.sourceforge.net" >> sf-creds.prop
               echo "bot-send-announcement=true" >> sf-creds.prop
-              echo '["1292499760","1396522419","1635533429","1057998166"]' >> allowed2port.json
+              echo '["129249","1396522419","1635533429","1057998166"]' >> allowed2port.json
 
        - name: Run Bot
          timeout-minutes: 350
