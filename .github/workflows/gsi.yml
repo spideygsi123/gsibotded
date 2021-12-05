@@ -46,7 +46,7 @@ jobs:
               cd ../; mv Bot/build/libs/*.jar BoboBot.jar
               rm -rf Bot
      
-       - - name: Setup Erfan Tools
+       - name: Setup Erfan Tools
          timeout-minutes: 10
          run: |
               sudo -E apt-get -qq install openjdk-8-jdk
