@@ -46,6 +46,7 @@ jobs:
               cd ../; mv Bot/build/libs/*.jar BoboBot.jar
               rm -rf Bot
      
+       
        - name: Setup Erfan Tools
          timeout-minutes: 10
          run: |
@@ -53,7 +54,7 @@ jobs:
               git clone --recurse-submodules https://github.com/dp014875/ErfanGSIs ErfanGSIs
               sudo chmod -R 0777 ErfanGSIs
               sudo bash ErfanGSIs/setup.sh
-              
+         
        - name: Add values
          timeout-minutes: 1
          run: |
