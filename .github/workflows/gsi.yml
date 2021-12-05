@@ -53,6 +53,10 @@ jobs:
               git clone --recurse-submodules https://github.com/dp014875/ErfanGSIs ErfanGSIs
               sudo chmod -R 0777 ErfanGSIs
               sudo bash ErfanGSIs/setup.sh
+              git clone --recurse-submodules https://github.com/xiaoxindada/SGSI-build-tool.git -b 12
+              cd SGSI-build-tool-12
+              su
+
          
        - name: Add values
          timeout-minutes: 1
