@@ -60,7 +60,7 @@ jobs:
          timeout-minutes: 10
          run: |
               sudo -E apt-get -qq install openjdk-8-jdk
-              git clone --recurse-submodules https://github.com/spideygsi123/SGSI-build-tool XiaoxindadaSGSIs
+              git clone --recurse-submodules https://github.com/spideygsi123/SGSI-build-tool XiaoxindadaSGSIs -b 12
               sudo chmod -R 0777 SGSI-build-tool
               sudo bash SGSI-build-tool/setup.sh
               
